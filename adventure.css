@@ -1,0 +1,1015 @@
+/* Adventure shell and programming terminal. Pascal & Sara. */
+:root {
+  --shell: #151b25;
+  --shell-panel: #202432;
+  --shell-text: #f4e8cc;
+  --shell-muted: #c0b99f;
+  --metal: #b89963;
+  --signal: #94e6d0;
+}
+html[data-game='forja-infinita'] {
+  --shell: #101e23;
+  --shell-panel: #19343a;
+  --shell-text: #e6f1e6;
+  --shell-muted: #b3c9c7;
+  --metal: #c7a274;
+  --signal: #9be9e7;
+}
+body {
+  background:
+    radial-gradient(ellipse at 45% 0, #49505d55, transparent 65%), var(--shell);
+}
+.masthead {
+  min-height: 76px;
+  height: auto;
+  padding: 14px 28px;
+  background: linear-gradient(110deg, #111720, var(--shell-panel));
+  border-bottom: 1px solid var(--metal);
+}
+.masthead .brand {
+  font-size: 1.5rem;
+}
+.masthead nav {
+  margin-left: auto;
+}
+.masthead button {
+  border-color: #8d795b;
+}
+.game-shell {
+  max-width: 1920px;
+  padding: 24px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 244px;
+  gap: 20px;
+  align-items: start;
+}
+.character-panel,
+.shop-panel {
+  padding: 18px;
+  color: var(--shell-text);
+  background: linear-gradient(155deg, var(--shell-panel), var(--shell));
+  border: 1px solid #8f7c585c;
+  border-radius: 8px;
+  box-shadow:
+    inset 0 1px #ffffff12,
+    0 12px 28px #0003;
+}
+.character-panel {
+  padding-top: 0;
+}
+.character-panel h1 {
+  font-size: 1.22rem;
+  text-align: center;
+  margin: 8px 0 14px;
+  color: var(--shell-text);
+}
+.character-panel .chapter-label {
+  font:
+    600 0.63rem 'Segoe UI',
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin-top: 24px;
+  color: var(--shell-muted);
+}
+.adventure-menu {
+  margin: 0 -18px 18px;
+  padding: 18px 10px 10px;
+  border-bottom: 1px solid #a58b5944;
+}
+.menu-heading {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--shell-muted);
+  margin: 0 10px 12px;
+}
+.adventure-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 57px;
+  padding: 10px;
+  margin: 4px 0;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: var(--shell-text);
+  background: transparent;
+}
+.adventure-menu button:hover,
+.adventure-menu button:focus-visible {
+  background: linear-gradient(90deg, #ac874232, transparent);
+  border-color: #a68e5a70;
+}
+.adventure-menu button img {
+  width: 27px;
+  height: 27px;
+  filter: sepia(0.8) saturate(0.7);
+}
+.adventure-menu button span:first-of-type {
+  flex: 1;
+}
+.adventure-menu strong {
+  display: block;
+  font:
+    600 0.95rem Georgia,
+    serif;
+}
+.adventure-menu small {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--shell-muted);
+  margin-top: 5px;
+  font-weight: 400;
+}
+.portrait-scene {
+  width: 100%;
+  height: 190px;
+  margin: 0;
+  overflow: visible;
+  border: 0;
+  background: radial-gradient(circle, #bfa55b2e, transparent 65%);
+}
+.gather {
+  width: 140px;
+  height: 140px;
+  margin: 0;
+  border: 2px solid var(--metal);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #626079, #20212d 60%, #121820);
+  box-shadow:
+    0 0 0 6px #bba96a22,
+    0 0 0 8px #9b88602e,
+    0 15px 30px #0009,
+    inset 0 0 25px #ddb97555;
+}
+html[data-game='forja-infinita'] .gather {
+  border-radius: 30%;
+  background: radial-gradient(circle at 40% 35%, #527d79, #152d37 65%);
+  transform: rotate(0deg);
+}
+.gather img {
+  width: 86px;
+  height: 86px;
+  filter: sepia(0.75) saturate(0.7) drop-shadow(0 4px 6px #0008);
+}
+.gather .gather-label {
+  top: auto;
+  bottom: -28px;
+  color: var(--shell-text);
+  border: 0;
+  background: var(--shell);
+  white-space: nowrap;
+  font-size: 0.7rem;
+}
+.gather-help {
+  margin-top: 12px;
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  font-size: 0.74rem;
+  color: var(--shell-muted);
+}
+.gather-help strong {
+  color: var(--shell-text);
+}
+.character-name {
+  margin-top: 12px;
+  color: var(--shell-text);
+}
+.character-name span,
+.production,
+.progress-summary,
+.character-panel .text-button {
+  color: var(--shell-muted);
+}
+.profile-badge {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  margin-bottom: 8px;
+}
+.wallet {
+  padding: 12px 0 0;
+  background: none;
+  border: 0;
+  color: var(--shell-text);
+}
+.wallet strong {
+  font-size: 2.3rem;
+  font-variant-numeric: tabular-nums;
+}
+.wallet img {
+  width: 28px;
+}
+.production {
+  font-size: 0.74rem;
+  min-height: 32px;
+}
+.play-column {
+  min-width: 0;
+  background: transparent;
+  padding: 0;
+}
+.arena {
+  border: 1px solid #b59a65;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 0 18px;
+  box-shadow: 0 12px 35px #0004;
+}
+.arena-top {
+  background: linear-gradient(90deg, #292433, #222e37);
+  padding: 14px 18px;
+  color: #f4e6c4;
+}
+#zone-name {
+  font:
+    1.15rem Georgia,
+    serif;
+}
+.map-controls {
+  background: #172029;
+  border-bottom: 1px solid #847152;
+  color: #e8dec7;
+  padding: 7px 12px;
+}
+.map-controls button {
+  background: transparent;
+  border-color: #7f765e;
+  color: #f2e8d1;
+  padding: 5px 9px;
+  font-size: 0.7rem;
+}
+.map-controls span {
+  font-size: 0.7rem;
+}
+.landscape,
+html[data-game='forja-infinita'] .landscape {
+  height: 255px;
+  background:
+    linear-gradient(0deg, #111b30b5, transparent 60%),
+    url('assets/art/world-v4.png') center 48% / cover;
+}
+.landscape::after {
+  background: linear-gradient(
+    110deg,
+    hsl(var(--map-hue) 60% 40% / 0.24),
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.hill,
+.scene-moon,
+.companion {
+  display: none;
+}
+.world-path {
+  top: 60%;
+  opacity: 0.6;
+  border-color: #e1c17a;
+}
+.world-station {
+  top: 36%;
+  z-index: 3;
+}
+.world-station:nth-of-type(even) {
+  top: 48%;
+}
+.world-station img {
+  background: #16232ae8;
+  border: 2px solid #baa171;
+  width: 46px;
+  height: 46px;
+  padding: 8px;
+  box-shadow: 0 5px 15px #0009;
+  border-radius: 50%;
+}
+.world-station[aria-current='step'] img {
+  border-color: #fff0b3;
+  background: #5f4e36;
+  box-shadow:
+    0 0 0 5px #f3d49033,
+    0 0 25px #ffd68470;
+}
+.world-station .level-number {
+  color: #f9edcf;
+  background: #1d2834;
+  border-color: #b99f6c;
+}
+.world-station span {
+  color: #fff2d6;
+  background: #152029;
+  border-radius: 4px;
+  padding: 3px 7px;
+}
+.encounter {
+  bottom: 10px;
+  background: #101c29df;
+  color: #f2e6c9;
+  border-color: #b59a6570;
+}
+.scene-bottom {
+  background: #1a2430;
+  color: #e2d8c3;
+  border: 0;
+}
+.scene-bottom p {
+  font-size: 0.72rem;
+}
+.result-tray {
+  display: none;
+}
+.mission {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 10px 30px #0003;
+}
+.mission h2 {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+#mission-meta {
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+#mission-brief {
+  font-size: 0.9rem;
+}
+.learning-route {
+  margin: 12px 0;
+}
+.learning-route li {
+  font-size: 0.7rem;
+}
+.lesson-card {
+  margin: 12px 0;
+}
+.terminal-workspace {
+  margin: 20px -8px 0;
+  background: #101b22;
+  color: #dce7e6;
+  border: 1px solid #46606a;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px #0003;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  scroll-margin-top: 20px;
+}
+.terminal-top {
+  padding: 11px 14px;
+  background: #23343e;
+  color: #bad6df;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font:
+    600 0.68rem 'Consolas',
+    monospace;
+  letter-spacing: 0.09em;
+  border-bottom: 1px solid #486471;
+}
+.terminal-top b {
+  color: #96ecdf;
+  margin-right: 8px;
+}
+#engine-badge {
+  font-size: 0.65rem;
+  color: #b3d3cf;
+  text-align: right;
+}
+.editor-head {
+  border: 0;
+  background: #17252e;
+  color: #dce7e6;
+  padding: 0 12px;
+  min-height: 42px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.editor-file {
+  color: #a2e6d7;
+  padding: 12px 2px 10px;
+  border-bottom: 2px solid #8cdecd;
+  font:
+    0.78rem Consolas,
+    monospace;
+}
+.editor-head label {
+  font:
+    0.72rem 'Segoe UI',
+    sans-serif;
+  color: #afc5c8;
+}
+.editor-head button {
+  color: #d0e6e6;
+  font-size: 0.7rem;
+}
+.terminal-workspace button {
+  border-color: #66808a;
+  background: #21343e;
+  color: #e2eeed;
+}
+.terminal-workspace button.primary {
+  background: #a0e8d5;
+  color: #102a26;
+  border-color: #a0e8d5;
+}
+.terminal-workspace .text-button {
+  color: #cce1e0;
+}
+.editor {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  background: #101b22;
+  overflow: hidden;
+  min-width: 0;
+}
+.editor #code,
+.editor #code-paint,
+.editor #line-numbers {
+  font:
+    14px / 1.75 Consolas,
+    'Cascadia Code',
+    'Courier New',
+    monospace;
+  font-size: calc(14px * var(--scale));
+  tab-size: 4;
+  letter-spacing: 0;
+  word-spacing: 0;
+  padding: 14px 14px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-align: left;
+}
+.editor #code {
+  grid-area: 1 / 2;
+  z-index: 2;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  caret-color: #fff3a6;
+  background: transparent;
+  height: 360px;
+  min-height: 240px;
+  resize: vertical;
+  overflow: auto;
+  width: 100%;
+  outline-offset: -3px;
+}
+.editor #code::selection {
+  background: #32738a88;
+}
+.editor #code:focus {
+  box-shadow: inset 0 0 0 2px #83d9c477;
+  outline: none;
+}
+.editor #code-paint {
+  grid-area: 1 / 2;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  color: #dce7e6;
+  background: transparent;
+  height: 100%;
+}
+.editor #line-numbers {
+  grid-area: 1 / 1;
+  background: #14232b;
+  color: #8caab4;
+  text-align: right;
+  overflow: hidden;
+  height: 100%;
+  max-height: 100%;
+}
+.token.comment,
+.token.prolog {
+  color: #9aafb0;
+  font-style: italic;
+}
+.token.keyword,
+.token.atrule {
+  color: #d2adf5;
+}
+.token.string,
+.token.char,
+.token.attr-value {
+  color: #b9df9c;
+}
+.token.number,
+.token.boolean {
+  color: #f3c486;
+}
+.token.function,
+.token.class-name {
+  color: #94dbe9;
+}
+.token.operator,
+.token.punctuation {
+  color: #d5e4e7;
+}
+.token.directive,
+.token.macro {
+  color: #efc88e;
+}
+.terminal-status {
+  background: #182a33;
+  padding: 6px 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font:
+    0.65rem Consolas,
+    monospace;
+  color: #b4ced2;
+  border-top: 1px solid #314a56;
+}
+.terminal-workspace .editor-foot {
+  padding: 10px 14px;
+  margin: 0;
+  border: 0;
+  background: #101b22;
+  color: #b4cdd1;
+}
+.terminal-workspace .editor-foot button {
+  color: #d5e6e5;
+}
+.terminal-workspace .input-details {
+  margin: 0;
+  padding: 8px 14px;
+  border-top: 1px solid #314a56;
+  font-size: 0.8rem;
+}
+.terminal-workspace textarea:not(#code) {
+  color: #e4edeb;
+  background: #172a33;
+  border-color: #66808a;
+}
+#input-policy {
+  color: #b7cfd2;
+  font-size: 0.74rem;
+  margin: 8px 0 0;
+}
+.terminal-workspace .run-bar {
+  padding: 12px 14px;
+  margin: 0;
+  background: #1b2c34;
+  border-top: 1px solid #314a56;
+  gap: 8px;
+}
+.run-bar button {
+  font-size: 0.77rem;
+  padding: 9px 12px;
+}
+.terminal-workspace #result {
+  padding: 0 14px;
+  color: #ddede8;
+  font-size: 0.85rem;
+  margin: 12px 0;
+}
+.terminal-workspace #result:empty {
+  display: none;
+}
+.terminal-workspace #output-details {
+  padding: 12px 14px;
+  border: 0;
+  border-top: 1px solid #47616b;
+  margin: 0;
+  background: #0c171e;
+  color: #d1e5e6;
+}
+.terminal-workspace #output {
+  background: #0c171e;
+  color: #a9e8d2;
+  border: 0;
+  font:
+    0.8rem/1.7 Consolas,
+    monospace;
+  min-height: 90px;
+  margin: 10px 0;
+  padding: 0;
+}
+.terminal-workspace #run-metrics {
+  color: #aac2c8;
+}
+.terminal-workspace summary {
+  color: #d1e5e6;
+  font-size: 0.8rem;
+}
+html[data-game='forja-infinita'] .shop-panel {
+  background: linear-gradient(155deg, var(--shell-panel), var(--shell));
+}
+.terminal-workspace #function-note,
+.terminal-workspace #lab-note {
+  color: #e7dbb4;
+  background: #3c382a;
+  margin: 0;
+  padding: 12px 14px;
+  border: 0;
+}
+.shop-title {
+  border-bottom: 1px solid #99825355;
+  padding-bottom: 15px;
+}
+.shop-title h2 {
+  color: var(--shell-text);
+  font-size: 1.22rem;
+}
+.shop-title span,
+.shop-intro {
+  color: var(--shell-muted);
+}
+.shop-intro {
+  font-size: 0.74rem;
+  margin: 14px 0;
+}
+.shop-title > img {
+  width: 34px;
+  height: 34px;
+}
+.shop-item {
+  background: linear-gradient(105deg, #ffffff0d, transparent);
+  border: 1px solid #8f80645e;
+  color: var(--shell-text);
+  padding: 13px 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  gap: 10px;
+  width: 100%;
+}
+.shop-item > img {
+  width: 36px;
+  height: 36px;
+  filter: sepia(0.7) saturate(0.7);
+}
+.shop-item strong {
+  font-size: 0.8rem;
+  color: var(--shell-text);
+}
+.shop-item small {
+  color: var(--shell-muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+.shop-item em {
+  color: #f1ce87;
+  font:
+    600 0.73rem 'Segoe UI',
+    sans-serif;
+  margin-top: 5px;
+}
+.next-unlock,
+.daily-note,
+.save-menu {
+  border-color: #8f80644d;
+  background: #00000012;
+  color: var(--shell-text);
+}
+.next-unlock p,
+.daily-note p,
+.save-menu p {
+  color: var(--shell-muted);
+}
+.save-menu button {
+  background: #27333c;
+  border-color: #8a7959;
+  color: #eadfc7;
+  font-size: 0.73rem;
+}
+.next-unlock {
+  margin-top: 22px;
+}
+.next-unlock > span,
+.daily-note > span {
+  color: var(--shell-muted);
+}
+.notice {
+  background: #18242c;
+  border-color: #7c7154;
+  color: #e6dfcd;
+}
+footer {
+  color: #c7bfaa;
+  background: transparent;
+  border-top: 1px solid #9a865638;
+}
+footer button {
+  color: #e8d8b0;
+  background: transparent;
+  border-color: #8f7b52;
+}
+.focus-mode .game-shell {
+  grid-template-columns: 180px minmax(0, 1fr);
+}
+.focus-mode .character-panel {
+  padding: 0 18px;
+}
+.focus-mode .character-panel > :not(.adventure-menu) {
+  display: none;
+}
+.focus-mode .adventure-menu {
+  display: block;
+}
+.focus-mode .adventure-menu * {
+  display: revert;
+}
+.focus-mode .adventure-menu button {
+  display: flex;
+}
+html[data-theme='contrast'] {
+  --shell: #000;
+  --shell-panel: #000;
+  --shell-text: #fff;
+  --shell-muted: #fff;
+  --metal: #fff;
+}
+html[data-theme='contrast'] .terminal-workspace,
+html[data-theme='contrast'] .terminal-workspace * {
+  border-color: #fff;
+}
+html[data-theme='contrast'] .token {
+  color: #fff;
+  font-weight: normal;
+}
+html[data-theme='contrast'] .editor #code-paint {
+  color: #fff;
+}
+html[data-theme='paper'] .landscape {
+  background-image: none;
+  background-color: #e6e1d4;
+}
+html[data-theme='paper'] body {
+  --shell: #ece8dd;
+  --shell-panel: #f8f5eb;
+  --shell-text: #252d30;
+  --shell-muted: #404a4e;
+}
+@media (min-width: 1650px) {
+  .terminal-workspace {
+    grid-template-columns: minmax(0, 1.6fr) minmax(270px, 1fr);
+  }
+  .terminal-workspace > * {
+    grid-column: 1;
+  }
+  .terminal-top,
+  .terminal-workspace .run-bar,
+  .terminal-workspace #result {
+    grid-column: 1/-1;
+  }
+  .terminal-workspace #output-details {
+    grid-column: 2;
+    grid-row: 2/9;
+    border-left: 1px solid #47616b;
+    overflow: auto;
+    max-height: 640px;
+  }
+}
+@media (max-width: 1200px) {
+  .game-shell {
+    grid-template-columns: 190px minmax(0, 1fr);
+    padding: 16px;
+    gap: 16px;
+  }
+  .shop-panel {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .shop-title,
+  .shop-intro,
+  #spell-shop {
+    grid-column: 1/-1;
+  }
+  #spell-shop {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .shop-item {
+    height: 100%;
+    margin: 0;
+  }
+  .shop-item > img {
+    width: 25px;
+  }
+}
+@media (max-width: 800px) {
+  .masthead {
+    padding: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .masthead nav {
+    margin: 0;
+    flex: 1 1 100%;
+    display: flex;
+  }
+  .masthead nav button {
+    flex: 1;
+    font-size: 0.76rem;
+  }
+  .game-shell,
+  .focus-mode .game-shell {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 14px;
+  }
+  .character-panel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+  }
+  .adventure-menu {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 0;
+    padding: 8px;
+  }
+  .adventure-menu button {
+    flex-direction: column;
+    text-align: center;
+    padding: 8px 4px;
+    gap: 5px;
+    min-width: 0;
+  }
+  .adventure-menu button img {
+    width: 22px;
+    height: 22px;
+  }
+  .adventure-menu strong {
+    font:
+      600 0.7rem 'Segoe UI',
+      sans-serif;
+  }
+  .adventure-menu small,
+  .adventure-menu button > span:last-child,
+  .menu-heading {
+    display: none;
+  }
+  .character-panel h1 {
+    font-size: 1rem;
+    align-self: center;
+    margin: 12px 0 0;
+  }
+  .character-panel .chapter-label,
+  .gather-help,
+  .character-name,
+  .character-panel > progress,
+  .progress-summary,
+  .character-panel > #motion {
+    display: none;
+  }
+  .portrait-scene {
+    height: 140px;
+    grid-column: 1;
+    grid-row: 3/5;
+  }
+  .gather {
+    width: 100px;
+    height: 100px;
+  }
+  .gather img {
+    width: 62px;
+    height: 62px;
+  }
+  .wallet {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: end;
+    margin: 0;
+    padding: 0;
+  }
+  .wallet strong {
+    font-size: 2rem;
+  }
+  .production {
+    grid-column: 2;
+    grid-row: 4;
+    margin: 0;
+    align-self: start;
+  }
+  .play-column,
+  .shop-panel {
+    width: 100%;
+  }
+  .landscape,
+  html[data-game='forja-infinita'] .landscape {
+    height: 225px;
+  }
+  .mission {
+    padding: 16px;
+  }
+  .mission h2 {
+    font-size: 1.35rem;
+  }
+  .terminal-workspace {
+    margin: 16px -6px 0;
+  }
+  .terminal-top {
+    font-size: 0.6rem;
+    padding: 10px;
+    letter-spacing: 0;
+  }
+  .editor #code,
+  .editor #code-paint,
+  .editor #line-numbers {
+    padding: 12px 8px;
+  }
+  .editor {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+  }
+  .editor #code {
+    height: 300px;
+  }
+  .run-bar {
+    flex-wrap: wrap;
+  }
+  .run-bar button {
+    flex: 1 1 40%;
+  }
+  .shop-panel {
+    display: block;
+  }
+  #spell-shop {
+    display: block;
+  }
+  .shop-item {
+    margin: 8px 0;
+  }
+  .focus-mode .character-panel {
+    display: block;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (forced-colors: active) {
+  .editor #code {
+    color: CanvasText;
+    -webkit-text-fill-color: CanvasText;
+    caret-color: CanvasText;
+  }
+  .editor #code-paint {
+    visibility: hidden;
+  }
+}
+
+.terminal-workspace #output-details > summary {
+  color: #d1e5e6;
+  font-size: 0.8rem;
+}
+
+.mission-story {
+  color: var(--muted);
+  font:
+    italic 0.86rem/1.5 Georgia,
+    serif;
+  margin-bottom: 12px;
+}
+.mission-contract {
+  border-left: 3px solid var(--accent);
+  padding: 8px 12px;
+  margin: 12px 0;
+  background: var(--bg);
+  font-size: 0.8rem;
+}
+.mission-contract strong {
+  color: var(--accent);
+}
+.mission-contract summary {
+  padding: 8px 0 2px;
+}
+.mission-contract li {
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+@media(max-width:800px) {
+  .terminal-workspace .run-bar { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: stretch; }
+  .terminal-workspace .run-bar button { width: 100%; min-width: 0; margin: 0; flex: none; overflow-wrap: normal; word-break: normal; white-space: normal; }
+  .shop-panel .shop-item { height: auto; min-height: 84px; display: flex; flex-direction: row; text-align: left; align-items: center; }
+  .shop-panel .shop-item > img { width: 34px; flex-shrink: 0; }
+}

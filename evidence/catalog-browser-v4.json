@@ -1,0 +1,689 @@
+{
+  "date": "2026-10-20T10:16:15.874Z",
+  "browser": "Microsoft Edge / Chromium",
+  "build": "obfuscated",
+  "count": 136,
+  "passed": 136,
+  "results": [
+    {
+      "id": "C01-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C01-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C02-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C03-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C04-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C05-sumar-entrenamientos",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-el-avance-de-una-jugada",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C06-repeticiones-de-una-jugada",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C08-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C09-cambiar-al-portador",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C10-intercambiar-dorsales",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C11-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C12-E08",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C07-recorrer-las-dos-bandas",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-M01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-M02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-E01",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-E02",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-E03",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-E04",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-E05",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-E06",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-E07",
+      "ok": true,
+      "details": []
+    },
+    {
+      "id": "C13-E08",
+      "ok": true,
+      "details": []
+    }
+  ]
+}

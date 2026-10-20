@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-20T10:17:17.286Z",
+  "count": 13,
+  "passed": 13,
+  "results": [
+    {
+      "mission": "C12-E04",
+      "slug": "gremio-byte",
+      "code": "#include <stdio.h>\n\nint main(void) {\n    FILE *f = fopen(\"puntos.txt\", \"w\");\n    if (f == NULL)\n        return 1;\n    int escrito = fprintf(f, \"%d\\n\", 8);\n    int cerrado = fclose(f);\n    if (escrito < 0 || cerrado != 0)\n        return 1;\n    printf(\"Guardado: 13\\n\");\n    return 0;\n}\n",
+      "reason": "El mensaje anuncia13 pero puntos.txt conserva8: comprobar contenido externo.",
+      "shouldPass": false,
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 97,
+          "analysis": {
+            "ok": true,
+            "notes": [],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": "Comprueba el contenido real del archivo puntos.txt; imprimir la referencia no basta.\n"
+        }
+      ]
+    },
+    {
+      "mission": "C13-E04",
+      "slug": "gremio-byte",
+      "code": "#include <stdio.h>\n\nint main(void) {\n    int datos[] = {7, 9, 12};\n    FILE *f = fopen(\"puntos.bin\", \"wb\");\n    if (f == NULL)\n        return 1;\n    size_t escritos = fwrite(datos, sizeof datos[0], 3, f);\n    int cerrado = fclose(f);\n    if (escritos != 3 || cerrado != 0)\n        return 1;\n    printf(\"Elementos: %zu\\n\", escritos);\n    return 0;\n}\n",
+      "reason": "Escribe tres elementos y anuncia3, pero el tercer entero es12 en vez de11.",
+      "shouldPass": false,
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 97,
+          "analysis": {
+            "ok": true,
+            "notes": [],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": "Comprueba el contenido real del archivo puntos.bin; imprimir la referencia no basta.\n"
+        }
+      ]
+    },
+    {
+      "mission": "C12-E04",
+      "slug": "gremio-byte",
+      "code": "#include <stdlib.h>\n#include <stdio.h>\n\nint main(void) {\n    FILE *f = fopen(\"puntos.txt\", \"w\");\n    if (f == NULL)\n        return 1;\n    int escrito = fprintf(f, \"%d\\n\", 8);\n    int cerrado = fclose(f);\n    if (escrito < 0 || cerrado != 0)\n        return 1;\n    printf(\"Guardado: 13\\n\");\n    exit(0);\n}\n",
+      "reason": "exit(0) cannot bypass file verification",
+      "shouldPass": false,
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 97,
+          "analysis": {
+            "ok": true,
+            "notes": [],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": "Comprueba el contenido real del archivo puntos.txt; imprimir la referencia no basta.\n"
+        }
+      ]
+    },
+    {
+      "mission": "C12-E04",
+      "code": "#include <stdlib.h>\n#include <stdio.h>\n\nint main(void) {\n    FILE *f = fopen(\"puntos.txt\", \"w\");\n    if (f == NULL)\n        return 1;\n    int escrito = fprintf(f, \"%d\\n\", 13);\n    int cerrado = fclose(f);\n    if (escrito < 0 || cerrado != 0)\n        return 1;\n    printf(\"Guardado: 13\\n\");\n    exit(0);\n}\n",
+      "shouldPass": true,
+      "reason": "Valid file with explicit exit(0)",
+      "accepted": true,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": true,
+            "notes": [],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C02-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"2\\n1\\n7\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: Usar las operaciones bit a bit del encargo, calculando sobre los datos.",
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C03-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"2.75\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: Calcular la división con operandos de tipo adecuado; no escribir el resultado ya calculado.",
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C05-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"15\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes.",
+              "Esta misión practica un bucle que recorre los datos."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C06-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"14 7\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: definir y utilizar una función para el cálculo.",
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C07-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"18\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: Acceder a los elementos del array o matriz usando sus posiciones.",
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C08-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"3\\n8\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: Trabajar con el contenido de las cadenas mediante strlen o un recorrido explícito.",
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C09-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"10 10\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes.",
+              "Esta misión requiere usar el destino de un puntero; declararlo sin acceder a él no cumple el objetivo."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        },
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes.",
+              "Esta misión requiere usar el destino de un puntero; declararlo sin acceder a él no cumple el objetivo."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        },
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes.",
+              "Esta misión requiere usar el destino de un puntero; declararlo sin acceder a él no cumple el objetivo."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C11-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"2 9\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 0,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: Usar los campos de una estructura para representar y consultar el registro.",
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "mission": "C13-E04",
+      "code": "#include <stdio.h>\nint main(void) { printf(\"%s\", \"Elementos: 3\\n\"); return 0; }",
+      "shouldPass": false,
+      "reason": "Literal output does not perform the required learning operation",
+      "accepted": false,
+      "ok": true,
+      "details": [
+        {
+          "exitCode": 97,
+          "analysis": {
+            "ok": false,
+            "notes": [
+              "Requisito: Usar fwrite y comprobar su resultado cuando pueda fallar.",
+              "Requisito: Usar fclose y comprobar su resultado cuando pueda fallar.",
+              "Requisito: usar size_t para representar el recuento.",
+              "Requisito: mostrar resultados calculados o leídos, en lugar de escribir toda la respuesta como constantes."
+            ],
+            "depth": 0,
+            "preventExecution": false
+          },
+          "stderr": "Comprueba el contenido real del archivo puntos.bin; imprimir la referencia no basta.\n"
+        }
+      ]
+    }
+  ]
+}

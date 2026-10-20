@@ -1,6 +1,6 @@
 # Cómo jugar a Gremio Byte
 
-Pascal & Sara · Edición 1.2
+Pascal & Sara · Edición 1.3
 
 ## Tu objetivo
 
@@ -13,6 +13,12 @@ Pulso añade una moneda por pulsación: empieza en 25 monedas y su precio crece 
 Los hechizos acumulan un máximo de ocho horas cuando vuelves. El contador de monedas reunidas no baja al comprar; el monedero sí. Los ejercicios dan una recompensa una sola vez. Todos los contenidos están abiertos desde el principio.
 
 ## Tu ejercicio
+
+El menú **Terminal** te lleva al editor. Los colores distinguen instrucciones, cadenas y comentarios; los números sitúan cada línea. **Ejecutar** compila o interpreta el código y presenta los casos del ejercicio en Salida real. Si el editor está vacío, te lo indica sin contar un intento. Durante una ejecución puedes detenerla; el código queda protegido de cambios hasta terminar.
+
+Cada actividad tiene una breve situación, un objetivo y un modo de trabajo. En **Observa** y **Predice** encontrarás código completo para estudiar. **Completa**, **Repara** y **Resuelve** piden intervenir en el código; los comentarios señalan el trabajo pendiente y las pistas están disponibles en el cuaderno. En los retos abiertos conserva las interfaces y datos que pide el enunciado y escribe tu propio procedimiento.
+
+Abre **Requisitos del ejercicio** para consultar las condiciones evaluadas. Si debes usar un bucle, una función, un tipo como `size_t` o una operación como `fwrite`, se indica expresamente. Una salida coincidente no basta cuando el objetivo incluye procesar datos, crear un fichero o modificar una tabla. Las propuestas del cuaderno son ejemplos de solución; puedes resolverlo de otra manera si respetas los requisitos, las entradas y el formato solicitado.
 
 Lee el objetivo y el enunciado; observa o escribe el código. Ejecuta, compara los casos y corrige. Los primeros ejemplos tienen orientación; en los retos y repasos la ayuda queda plegada para que lo intentes por tu cuenta.
 

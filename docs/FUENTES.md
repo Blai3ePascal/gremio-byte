@@ -61,3 +61,8 @@ Las fechas de inicio —febrero de 2026 para C y junio de 2026 para Python/SQL�
 
 
 Pruebas de interacción del DOM: [jsdom 26.1.0](https://github.com/jsdom/jsdom/tree/26.1.0), MIT. Es una dependencia de pruebas y no se incluye en el motor de la página. El archivo insignia.png es una cuadrícula de ejercicio con valores RGB calculados por coordenadas; su esquina (0,0) sigue siendo (40,120,180).
+
+
+## Colores del editor
+
+Prism 1.30.0, licencia MIT. Copia íntegra: [Prism-MIT.txt](licenses/Prism-MIT.txt). El editor conserva un campo de texto nativo para escritura, selección y navegación por teclado.
