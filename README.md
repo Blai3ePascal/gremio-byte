@@ -16,3 +16,8 @@ Aventura de programación en C con GCC real dentro del navegador.
 El proyecto de C comenzó en febrero de 2026 y el de Python/SQL en junio de 2026. Esta reconstrucción se publicó en octubre de 2026.
 
 El progreso es formativo y local. La ofuscación no constituye una barrera de seguridad. Las licencias de terceros se conservan; la autoría del proyecto corresponde a Pascal & Sara.
+
+
+## Edición 1.1
+
+Navegación Anterior/Volver, función del emblema explicada, opciones de lectura, imagen y sonido, dos ambientes diferenciados y cuadernos guiados. [Cobertura y revisión del aprendizaje](docs/APRENDIZAJE.md).

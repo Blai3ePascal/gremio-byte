@@ -1,18 +1,58 @@
-<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>INFORME</title><link rel="stylesheet" href="../style.css"><style>main{max-width:900px;padding:2rem;margin:auto;background:var(--panel)}table{max-width:100%}h1{font:2rem/1.1 Georgia,serif}</style><body><main><a href="../">← Volver al juego</a><article class="prose"><h1>Informe de verificación</h1>
-<p>Pascal &amp; Sara · 20 de octubre de 2026 · Beta 1.0</p>
-<h2>Resultado</h2>
-<p>Se ejecutaron las soluciones de las <strong>176 misiones</strong> en Microsoft Edge/Chromium, con <strong>176 aprobadas y 0 fallos</strong>, sobre trabajadores ofuscados y GCC 14.2 / Linux x86 en v86. Cada misión utiliza todos sus casos de prueba declarados; el número de misiones no equivale al número de casos ni al de ejercicios independientes de escritura.</p>
-<p>Se realizaron dos pasadas completas del banco durante la reconstrucción. La segunda incorpora los cambios del catálogo y del empaquetado del motor. La evidencia final está en <code>evidence/catalog-browser-v1.json</code>.</p>
-<h2>Interacción</h2>
-<p>Pruebas automatizadas de clic, pistas, propuestas explicadas, ejecución real, recompensa única, representación del resultado, inventario, exportación, importación, preferencias, búsqueda de misiones, detención y persistencia de borradores.</p>
-<p>El alias con sintaxis HTML se presenta como texto. La importación rechaza esquemas ajenos, límites incorrectos y claves peligrosas. El código de práctica se ejecuta en trabajadores que se pueden terminar.</p>
-<p>Escritorio: 1440 px. Móvil: 390 px. Sin desbordamiento horizontal detectado, también con el texto al 200 %. La revisión con axe-core de las pantallas iniciales no detectó infracciones de las reglas WCAG A/AA seleccionadas. Esto no sustituye una auditoría manual con lectores de pantalla ni pruebas en todos los navegadores.</p>
-<p>Se inspeccionaron capturas reales de escritorio y móvil. El informe automatizado de uso está en <code>evidence/ui-browser-v1.json</code>.</p>
-<h2>Material docente</h2>
-<p>46 cuadernos por bloque, en versiones de práctica y propuestas explicadas, acompañan este juego. En la entrega conjunta se validaron la estructura JSON de 90 cuadernos y la sintaxis de 446 celdas Python de soluciones. Las celdas C y SQL se apoyan en las soluciones comprobadas en los motores; no se afirma una ejecución completa de los cuadernos dentro de Colab.</p>
-<p>Los originales se conservaron. Las diapositivas y PDF originales no se han remaquetado en esta reconstrucción.</p>
-<h2>Límites</h2>
-<p>Es una beta comprobada, no una garantía de ausencia absoluta de errores. Muchas actividades del banco son lecturas con datos fijos. Las pruebas finitas no demuestran generalización a toda entrada, ni impiden respuestas artificiosas.</p>
-<p>El motor C usa punteros de 32 bits; los tiempos corresponden a la emulación. El contexto del navegador y los dispositivos pueden cambiar el rendimiento. No se verificó Safari ni Firefox.</p>
-<p>La equivalencia exacta con la guía y los criterios UAX 2026/27 queda pendiente de esa documentación vigente. E/R, interpretación de gráficos y justificaciones requieren valoración docente.</p>
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>INFORME</title><link rel="stylesheet" href="../style.css"><style>main{max-width:900px;padding:2rem;margin:auto;background:var(--panel)}table{max-width:100%}h1{font:2rem/1.1 Georgia,serif}</style><body><main><a href="../">← Volver al juego</a><article class="prose"><h1>Verificación de la edición 1.1</h1>
+<p>Pascal &amp; Sara · 20 de octubre de 2026 · 1.1.0-beta.2</p>
+<h2>Cambios</h2>
+<ul>
+<li>El emblema explica +1 moneda, su uso y su carácter opcional. Hay respuesta escrita al pulsarlo.</li>
+<li>Anterior y Siguiente recorren el catálogo en orden; Volver y el historial del navegador conservan destinos y borradores.</li>
+<li>Cada una de las 45 unidades tiene idea central, pasos, error frecuente, variante de transferencia y preguntas de revisión.</li>
+<li>Los 90 cuadernos incluyen portada, índice, predicción, preparación plegada, código, resultados y reflexión. SQL muestra la consulta editable en varias líneas y comprueba los casos.</li>
+<li>Las opciones se agrupan como Lectura, imagen y sonido: texto hasta 200 %, espaciado, controles grandes, contraste, paletas, lectura en voz alta, volumen, movimiento y mesa de estudio.</li>
+<li>Gremio Byte usa un paisaje de aventura con niebla y partículas; Forja Infinita, siluetas de taller y cinta de producción. El movimiento se puede desactivar y respeta la preferencia del sistema.</li>
+<li>Se corrigieron 34 actividades Python que incluían toda la solución como código inicial; ahora tienen una parte conceptual pendiente. Las propuestas completas siguen bajo petición.</li>
+<li>Se corrigió la descripción de F16: inspeccionar bytecode no equivale a ejecutar ensamblador nativo.</li>
+<li>El trazador Python cuenta líneas sin leer variables locales: se evita una interferencia observada en comprensiones al preparar imágenes.</li>
+</ul>
+<h2>Pruebas ejecutadas</h2>
+<table>
+<thead>
+<tr>
+<th>Comprobación</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Soluciones de este juego en motores reales y distribución ofuscada</td>
+<td>176/176</td>
+</tr>
+<tr>
+<td>Navegación anterior, siguiente, volver, adelante y salto desde mapa</td>
+<td>Correcta; borradores conservados</td>
+</tr>
+<tr>
+<td>Preferencias, recarga, mesa de estudio y movimiento reducido</td>
+<td>Correctas</td>
+</tr>
+<tr>
+<td>Móvil, texto al 200 % y controles grandes</td>
+<td>Sin desbordamiento horizontal detectado</td>
+</tr>
+<tr>
+<td>Axe: pantalla inicial, cuaderno, opciones y contraste al 200 %</td>
+<td>Sin infracciones detectadas de las reglas WCAG 2 A/AA y 2.1 AA seleccionadas</td>
+</tr>
+<tr>
+<td>Progresión, recompensas, inventario, exportar/importar, detener ejecución</td>
+<td>Correctos</td>
+</tr>
+<tr>
+<td>Estructura de los 90 cuadernos y sintaxis de 443 celdas Python de soluciones</td>
+<td>Correctas</td>
+</tr>
+</tbody></table>
+<p>En los cuadernos de C, las 176 celdas de solución coinciden exactamente con las soluciones ejecutadas mediante GCC en el navegador. Las celdas auxiliares de compilación de Colab se verificaron estructuralmente y en sintaxis; no se ejecutó la interfaz de Colab ni un compilador Linux externo.</p>
+<h2>Evidencias y límites</h2>
+<p>Los JSON de evidence conservan los resultados por misión y comprobación. Las inspecciones visuales incluyen escritorio, móvil, cuaderno del juego y representaciones HTML de cuatro cuadernos de trabajo.</p>
+<p>Una herramienta automática no certifica toda la experiencia de uso. La lectura en voz alta depende del soporte y las voces del navegador; el texto permanece disponible.</p>
+<p>Completar un catálogo no demuestra aprendizaje generalizable ni equivalencia con una guía oficial no aportada. La <a href="APRENDIZAJE.html">matriz de cobertura y los ocho retos integradores</a> distinguen resultados comprobables de explicaciones que requieren revisión docente. Ensamblador nativo, justificación de modelos E/R e interpretación de gráficos necesitan las prácticas o la revisión indicadas allí.</p>
+<p>Las diapositivas y PDF originales se conservan; esta entrega mejora los juegos y los cuadernos complementarios. El código propio de publicación está ofuscado; la copia editable se entrega separada.</p>
 </article><p><a href="INFORME.html">Informe de pruebas</a> · <a href="DESPLIEGUE.html">Despliegue</a></p></main></body></html>

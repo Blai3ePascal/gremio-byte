@@ -18,3 +18,8 @@ Pascal & Sara · Beta 1.0
 - Código propio y catálogo integrados en el paquete ofuscado; copia editable separada.
 
 Las comprobaciones estructurales son ayudas formativas. No se presenta el progreso como una nota oficial ni como demostración formal de corrección.
+
+
+## Edición 1.1
+
+Consulta el [informe de verificación](INFORME.md) y la [matriz de aprendizaje](APRENDIZAJE.md). Se corrigieron los 34 códigos iniciales completos, las afirmaciones sobre ensamblador de F16 y la interferencia del trazador con comprensiones de Python. Se añadió navegación con historial y guías por unidad.

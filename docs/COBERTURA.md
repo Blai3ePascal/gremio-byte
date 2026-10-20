@@ -37,3 +37,14 @@ La revisión contrasta el material aportado y la [guía pública FPI 2025](https
 El bytecode de Python no sustituye ensamblador nativo. Los diagramas E/R, la elección de gráficos y las explicaciones de algoritmos requieren revisión docente. Las pruebas finitas y el análisis del código son formativos; no equivalen a verificar todas las soluciones posibles.
 
 La auditoría de los originales y las correcciones realizadas se entregan con el código editable.
+
+
+## Edición 1.1 · Orientación y aprendizaje
+
+El emblema da una moneda por pulsación; es opcional y no completa ejercicios. Las monedas compran mejoras y reliquias. Las misiones aportan más monedas y abren mejoras; todo el temario está disponible sin pulsar el emblema.
+
+Anterior y Siguiente recorren el catálogo en orden. Volver regresa a la misión visitada antes; el historial del navegador también conserva esos destinos y los borradores.
+
+Lectura, imagen y sonido permite texto hasta 200 %, espaciado amplio, controles grandes, contraste, paletas descriptivas, volumen, fondo animado y mesa de estudio. Todos los sonidos tienen información escrita. La lectura en voz alta usa las voces disponibles en el navegador y puede detenerse.
+
+Los cuadernos siguen Entiende → Predice → Programa → Comprueba. Cada bloque termina con transferencia a un problema nuevo. Consulta la [matriz de cobertura y los ocho retos integradores](APRENDIZAJE.md), incluida la rúbrica para revisar explicaciones y decisiones.

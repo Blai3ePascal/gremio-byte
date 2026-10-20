@@ -1,0 +1,342 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>APRENDIZAJE</title><link rel="stylesheet" href="../style.css"><style>main{max-width:900px;padding:2rem;margin:auto;background:var(--panel)}table{max-width:100%}h1{font:2rem/1.1 Georgia,serif}</style><body><main><a href="../">← Volver al juego</a><article class="prose"><h1>Cobertura, transferencia y revisión del aprendizaje</h1>
+<p>Pascal &amp; Sara · 20 de octubre de 2026 · Revisión 2</p>
+<h2>Qué permite afirmar esta revisión</h2>
+<p>Los juegos cubren un recorrido amplio de programación en C y de Python, análisis de datos y SQL. Completar sus misiones demuestra haber superado las comprobaciones concretas del recorrido; no demuestra por sí solo que una persona pueda resolver problemas nuevos sin ayuda, justificar decisiones o conservar lo aprendido.</p>
+<p>La revisión se realiza sobre <code>juegos/gremio-byte/content/catalog.json</code>, <code>juegos/forja-infinita/content/catalog.json</code>, la auditoría de los originales, sus matrices de cobertura y los dos textos aportados. Es una revisión de contenido y estructura de evaluación. No es una nueva ejecución de las 403 soluciones ni una investigación con estudiantes.</p>
+<p>El material disponible contiene referencias al campus y su índice, pero no una ficha completa vigente 2026/27 que permita certificar resultados de aprendizaje, ponderación y profundidad exigida. La guía pública FPI 2025 ya analizada en la auditoría es de otro curso y contiene inconsistencias de plantilla. Las correspondencias siguientes son con los objetivos del banco facilitado, no una certificación de equivalencia oficial.</p>
+<h2>Inventario del catálogo en el momento de la revisión</h2>
+<table>
+<thead>
+<tr>
+<th>Evidencia</th>
+<th align="right">Gremio Byte</th>
+<th align="right">Forja Infinita</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Unidades, incluida introducción</td>
+<td align="right">23</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>Misiones</td>
+<td align="right">176</td>
+<td align="right">227</td>
+</tr>
+<tr>
+<td>Lecturas de ejemplo</td>
+<td align="right">34</td>
+<td align="right">36</td>
+</tr>
+<tr>
+<td>Predicciones</td>
+<td align="right">26</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>Completar código</td>
+<td align="right">28</td>
+<td align="right">31</td>
+</tr>
+<tr>
+<td>Modo código</td>
+<td align="right">88</td>
+<td align="right">128</td>
+</tr>
+<tr>
+<td>Ordenar bloques</td>
+<td align="right">0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>Misiones con más de un caso en <code>tests</code></td>
+<td align="right">6</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>Código/completar cuyo <code>starter</code> coincide con <code>solution</code></td>
+<td align="right">0</td>
+<td align="right">34</td>
+</tr>
+</tbody></table>
+<p>La última fila es un problema de señalización pedagógica: un código completo puede ser un buen ejemplo experimental, pero aprobarlo sin modificar nada no acredita una implementación autónoma. Las 34 coincidencias de Forja son F10-A01–A04, F11-A01–A05, F12-A01–A05, F13-A01–A06, F14-A01–A03, F15-A01–A04, F16-A01–A04 y F17-A01–A03.</p>
+<p>El recuento de <code>tests</code> mide baterías externas declaradas, no todos los casos ejecutados dentro de los programas: algunas soluciones incorporan varios escenarios y aserciones internas. Aun así, si se evalúa solamente la salida de un programa editable, imprimir las constantes esperadas puede eludir el objetivo. Los análisis sintácticos ayudan a una práctica guiada; no garantizan comprensión.</p>
+<h2>Matriz de C</h2>
+<p>“Ejecución” significa compilación y contraste con la salida o el arnés declarado. “Revisión” significa evidencia que necesita explicación o inspección humana adicional.</p>
+<table>
+<thead>
+<tr>
+<th>Objetivo del banco</th>
+<th>Bloques y misiones representativas</th>
+<th>Evidencia actual</th>
+<th>Lo que falta demostrar</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Editar, compilar y separar fuente/ejecutable</td>
+<td>INICIO, C01; GB-01, C01-M01</td>
+<td>Ejecución, lectura, completar, predicción</td>
+<td>Reconstruir un proyecto fuera del editor y explicar un diagnóstico nuevo</td>
+</tr>
+<tr>
+<td>Representación, lógica, tipos y conversión</td>
+<td>C02–C03; C02-M01/M02, C03-M01/M02</td>
+<td>Operaciones y salidas concretas</td>
+<td>Elegir tipos, justificar ancho/rango y diseñar entradas inválidas propias</td>
+</tr>
+<tr>
+<td>Decisiones, repetición y terminación</td>
+<td>C04–C05; C05-sumar-entrenamientos</td>
+<td>Predicción, trazas y algunos casos de función</td>
+<td>Cubrir todas las ramas; justificar terminación con datos distintos</td>
+</tr>
+<tr>
+<td>Descomposición funcional y recursión</td>
+<td>C06; C06-el-avance-de-una-jugada, C06-repeticiones-de-una-jugada</td>
+<td>Parámetros, retornos y batería de función</td>
+<td>Diseñar interfaces y casos base sin una firma ya facilitada</td>
+</tr>
+<tr>
+<td>Arrays, matrices y cadenas</td>
+<td>C07–C08; C07-recorrer-las-dos-bandas, C08-M01/M02</td>
+<td>Recorridos, comparación y longitud/capacidad</td>
+<td>Matrices no cuadradas, límites elegidos por el estudiante y entrada larga</td>
+</tr>
+<tr>
+<td>Punteros, alias y modificación del llamador</td>
+<td>C09–C10; C09-cambiar-al-portador, C10-intercambiar-dorsales</td>
+<td>Reglas de construcción, varios casos, llamada con NULL</td>
+<td>Explicar vida de objetos y detectar direcciones colgantes en código nuevo</td>
+</tr>
+<tr>
+<td>Struct, estados y contratos de error</td>
+<td>C11, P01</td>
+<td>Copia, acceso indirecto y escenarios de estado</td>
+<td>Documentar invariantes y propiedad cuando varios campos son punteros</td>
+</tr>
+<tr>
+<td>Archivos, errores y formato persistente</td>
+<td>C12–C13; C12-M01/M02, C13-M02</td>
+<td>Lectura/escritura y recuentos concretos</td>
+<td>Fallos de apertura, truncamiento, portabilidad y recuperación robusta</td>
+</tr>
+<tr>
+<td>Memoria dinámica y capacidad</td>
+<td>C14; C14-A01–A04</td>
+<td>Ejemplos y crecimiento de vector</td>
+<td>Fallo de reserva, secuencia larga, alias tras realloc y liberación completa</td>
+</tr>
+<tr>
+<td>Búsqueda, ordenación y coste</td>
+<td>C15; C15-A01–A04</td>
+<td>Algoritmos, contratos y trazas</td>
+<td>Generalización, conservación de multiplicidades y comparación por tamaños</td>
+</tr>
+<tr>
+<td>TAD y estructuras enlazadas</td>
+<td>C16–C19</td>
+<td>Pila/cola, lista, árbol y hash con escenarios acotados</td>
+<td>Invariantes bajo secuencias nuevas; datos degenerados; límites y propiedad</td>
+</tr>
+<tr>
+<td>Integración y herramientas</td>
+<td>C20, C-TALLER</td>
+<td>Proyecto guiado y ejemplos con módulos</td>
+<td>Diseño desde requisitos, depurador real, historial Git y construcción limpia</td>
+</tr>
+</tbody></table>
+<p>No se sustituye C por C++: clases, excepciones y referencias de C++ no se presentan como construcciones de C. El recorrido puede enseñar alternativas en C —struct, punteros, contratos y códigos de error—; la equivalencia curricular requiere confirmación si una guía vigente siguiera exigiendo contenidos de C++.</p>
+<h2>Matriz de Python y SQL</h2>
+<table>
+<thead>
+<tr>
+<th>Objetivo del banco</th>
+<th>Bloques y misiones representativas</th>
+<th>Evidencia actual</th>
+<th>Lo que falta demostrar</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Entorno, expresiones, representación y algoritmo</td>
+<td>INICIO, F01–F03, F-MET</td>
+<td>Ejecución, predicción, pseudocódigo y búsqueda</td>
+<td>Planificar una solución nueva y ejecutar el cuaderno desde estado limpio</td>
+</tr>
+<tr>
+<td>Control, funciones, objetos, recursión y errores</td>
+<td>F04; F04-repartir-por-filas, F04-una-puja-v-lida</td>
+<td>Lectura/código, estructura de bucles y excepción específica</td>
+<td>Diseñar funciones; comprobar ramas, independencia de objetos y recuperación</td>
+</tr>
+<tr>
+<td>Colecciones, alias y copias</td>
+<td>F10; F10-la-mano-en-orden-inverso</td>
+<td>Retorno y conservación de entrada en la misión específica</td>
+<td>Copias anidadas, matrices distintas y elección razonada de estructura</td>
+</tr>
+<tr>
+<td>Búsqueda y ordenación</td>
+<td>F03, F11</td>
+<td>Trazas, cinco estrategias y conteos</td>
+<td>Implementar sin ejemplo completo, justificar coste y conservación</td>
+</tr>
+<tr>
+<td>Tablas, limpieza, estadística e informe</td>
+<td>F05A, F06, F12, F14</td>
+<td>Cálculos, convenciones y lectura/escritura CSV</td>
+<td>Justificar políticas con datos nuevos y comunicar incertidumbre y límites</td>
+</tr>
+<tr>
+<td>Visualización e imágenes</td>
+<td>F05B, F13, F-PIL</td>
+<td>Archivos, dimensiones/modos y resultados declarados</td>
+<td>Elegir gráfico, verificar etiquetas/escala y argumentar su interpretación</td>
+</tr>
+<tr>
+<td>Modelo relacional y E/R</td>
+<td>F07–F08; F08-DISENO-1/2</td>
+<td>DDL, columnas, claves y rechazo de inserciones inválidas</td>
+<td>Elaborar modelo propio, justificar participación y representar históricos</td>
+</tr>
+<tr>
+<td>Consultas y modificaciones</td>
+<td>F09, SQL</td>
+<td>Filtros, joins, agrupaciones, subconsultas, cambios y variantes</td>
+<td>Traducir una pregunta nueva; manejar duplicados, NULL, empates y ausencia</td>
+</tr>
+<tr>
+<td>Transacciones, esquema y persistencia</td>
+<td>F15; F15-A01–A04</td>
+<td>Cierre/reapertura, rollback y cambios de esquema guiados</td>
+<td>Fallos intermedios, preservación de relaciones y migración desde otro estado</td>
+</tr>
+<tr>
+<td>Memoria, caché, instrucciones y rendimiento</td>
+<td>F02, F16</td>
+<td>Modelo de caché, <code>dis</code>, mediciones</td>
+<td>Ensamblador nativo si lo exige la guía; separar modelo y máquina real</td>
+</tr>
+<tr>
+<td>Interacción y comunicación</td>
+<td>F17</td>
+<td>Etiqueta y límites de formulario, entradas e informes</td>
+<td>Prueba humana con teclado, ampliación y lectura asistida; mensajes comprensibles</td>
+</tr>
+</tbody></table>
+<p>Se detectó una incoherencia concreta en F16: la teoría del catálogo afirmaba ejecución x86-64 mediante GCC mientras F16-A02/A03 inspeccionan bytecode de Python con <code>dis</code>. La explicación debe corregirse en juego y cuadernos. Una práctica nativa externa debe identificarse como tal, verificarse y conservarse cuando sea necesaria; no basta con nombrarla.</p>
+<h2>Mejora de las explicaciones</h2>
+<p>El archivo <code>qa/coverage-guides.json</code> proporciona 45 guías, una por unidad, con <code>idea</code>, <code>steps</code>, <code>pitfall</code>, <code>transfer</code> y <code>review</code>. Cada guía contiene una idea central, tres acciones, un error conceptual frecuente, una modificación nueva y dos criterios de autoevaluación. Los identificadores se comprobaron contra ambos catálogos.</p>
+<p>Su uso recomendado es:</p>
+<ol>
+<li>Mostrar la idea central junto al reto; mantener la explicación extensa desplegable.</li>
+<li>Pedir una predicción antes de ejecutar. Comparar esperado y observado, incluyendo espacios, saltos, estado y artefactos cuando sean relevantes.</li>
+<li>Nombrar cada construcción cuando aparece por primera vez: qué recibe, qué hace y qué devuelve o modifica.</li>
+<li>Explicar la causa del error y la próxima acción posible, sin atribuir el fallo a la persona.</li>
+<li>Tras una solución, proponer transferencia con datos distintos y pedir una justificación breve.</li>
+<li>Mantener separadas tres evidencias: “he consultado”, “he superado pruebas” y “puedo explicarlo en un caso nuevo”. No convertir una casilla marcada en una calificación automática.</li>
+</ol>
+<p>En los cuadernos conviene que cada actividad tenga “Objetivo”, “Antes de ejecutar”, “Tu código”, “Comprueba” y “Explica el cambio”. La solución debe seguir el mismo orden. Los dibujos deben acompañarse de una descripción textual. No se debe usar solo color, sonido o movimiento para comunicar un estado. El código en una versión de trabajo debe ofrecer un punto de intervención real, o identificarse explícitamente como experimento.</p>
+<h2>Cuatro retos integradores de C</h2>
+<p>Estos retos son propuestas de transferencia con revisión humana, no misiones existentes ya implementadas ni baterías nuevas ejecutadas.</p>
+<h3>C-I1. Registro de expediciones</h3>
+<p><strong>Integra:</strong> C03–C08, C11–C12 y C20. Leer registros <code>id;nombre;puntos</code>, validar, consultar por identificador, calcular un resumen y guardar los datos aceptados. Separar lectura, validación y operaciones en funciones.</p>
+<p><strong>Contrato:</strong> identificador positivo y único; nombre no vacío con capacidad documentada; puntos dentro del intervalo elegido; rechazar la línea completa cuando no sea válida. Mantener el orden de los registros aceptados.</p>
+<p><strong>Pruebas:</strong> archivo vacío, línea sin salto final, campo ausente, sufijo no numérico, línea demasiado larga, identificador duplicado, límites del intervalo y fallo de apertura. Tras guardar y reabrir, comparar todos los registros.</p>
+<p><strong>Entrega y explicación:</strong> fuentes, datos de prueba y resultados; dibujar el recorrido de una línea rechazada y justificar por qué no contamina la siguiente.</p>
+<h3>C-I2. Inventario que crece</h3>
+<p><strong>Integra:</strong> C07–C11, C14, C15 y P01. Construir un vector dinámico de objetos, insertar, buscar, actualizar y eliminar sin confundir longitud y capacidad.</p>
+<p><strong>Contrato:</strong> estado válido incluso cuando una operación falla; propietario único de cada reserva; referencias temporales no usadas después de crecimiento; liberar todas las reservas al terminar.</p>
+<p><strong>Pruebas:</strong> vacío, un objeto, varios crecimientos, eliminación inicial/intermedia/final, clave ausente, duplicados y fallo de reserva provocado mediante una función de reserva sustituible en pruebas.</p>
+<p><strong>Entrega y explicación:</strong> tabla de operaciones con longitud/capacidad y diagrama de propiedad antes/después de crecer. Revisar código y, en entorno nativo compatible, usar herramientas de diagnóstico de memoria como complemento; no asumir que una salida correcta demuestra ausencia de uso inválido.</p>
+<h3>C-I3. Gestor de tareas y búsquedas</h3>
+<p><strong>Integra:</strong> C05–C07, C15–C19. Gestionar tareas pendientes en cola, historial para deshacer en pila y consulta de identificadores mediante una estructura elegida.</p>
+<p><strong>Contrato:</strong> describir LIFO/FIFO; justificar lista, árbol o hash para la consulta; mantener invariantes; definir el comportamiento ante lleno, vacío y duplicados.</p>
+<p><strong>Pruebas:</strong> operaciones intercaladas, vaciado y reutilización, claves que colisionan, inserción ordenada que degenere un árbol si se elige esa estructura, consulta ausente y secuencia larga reproducible.</p>
+<p><strong>Entrega y explicación:</strong> comparar dos tamaños contando operaciones, sin confundir el conteo con tiempo exacto. Explicar por qué se eligió cada estructura y qué se pierde con esa elección.</p>
+<h3>C-I4. Proyecto reconstruible</h3>
+<p><strong>Integra:</strong> C01, C06, C09–C13 y C-TALLER. Separar uno de los proyectos anteriores en cabeceras y módulos, construirlo desde una copia limpia y localizar un error con depurador.</p>
+<p><strong>Pruebas:</strong> compilación con advertencias, cabecera incluida dos veces, declaración incoherente, fichero ausente y prueba de regresión de la corrección.</p>
+<p><strong>Entrega y explicación:</strong> fuente, instrucciones de construcción, casos de prueba y un historial de cambios. Mostrar estado antes/después de una instrucción en el depurador. No asignar esta evidencia por haber ejecutado el programa monolítico del navegador.</p>
+<h2>Cuatro retos integradores de Python y SQL</h2>
+<h3>F-I1. Datos, decisiones e informe</h3>
+<p><strong>Integra:</strong> F01–F06, F10, F12–F14 y F17. Leer un CSV de resultados, validar, distinguir ausencia/error/duplicado, resumir por grupo y producir tabla, gráfico e informe.</p>
+<p><strong>Contrato:</strong> declarar tipos, rangos, política de duplicados, denominador de dispersión y unidades. No borrar datos silenciosamente.</p>
+<p><strong>Pruebas:</strong> conjunto vacío, grupo de un elemento, ausencias, valores extremos, duplicado idéntico, identificador en conflicto, campos entrecomillados y fechas desordenadas. Cambiar los datos después del desarrollo.</p>
+<p><strong>Entrega y explicación:</strong> ejecutar desde estado limpio, reconstruir el resumen y justificar un gráfico. Evaluar etiquetas, escala, tamaño de muestra y límites de interpretación mediante revisión, no solo existencia de PNG.</p>
+<h3>F-I2. Biblioteca con historial</h3>
+<p><strong>Integra:</strong> F07–F09, F15 y SQL. Diseñar personas, ejemplares y préstamos que conserven episodios repetidos del mismo ejemplar y persona.</p>
+<p><strong>Contrato:</strong> diagrama con participación mínima y cardinalidad máxima; claves justificadas; restricciones; consultas de personas sin préstamos, préstamos abiertos y recuentos incluyendo ceros.</p>
+<p><strong>Pruebas:</strong> persona sin relación, ejemplar nunca prestado, préstamo repetido en otra fecha, fecha ausente cuando sea admisible, empate en recuentos, referencia inexistente e intento de préstamo incompatible con las reglas elegidas.</p>
+<p><strong>Entrega y explicación:</strong> diagrama, DDL, consultas y resultados sobre dos juegos de datos. La defensa del modelo se revisa aparte del SQL; se aceptan diseños alternativos coherentes con el contrato.</p>
+<h3>F-I3. Actualización que conserva datos</h3>
+<p><strong>Integra:</strong> F04, F06, F14–F15 y SQL. Importar un lote CSV a SQLite, actualizar registros existentes y registrar los rechazos sin dejar una importación parcial.</p>
+<p><strong>Contrato:</strong> transacción; consultas parametrizadas en Python; cierre y reapertura; conservación de columnas no afectadas y de relaciones. Distinguir rechazo de un registro y fallo que obliga a revertir el lote.</p>
+<p><strong>Pruebas:</strong> fallo a mitad de lote, clave repetida, texto con comillas, cambio sin coincidencia, restricción fallida y reapertura con conexión nueva. Comparar el estado completo antes/después, no solo la columna modificada.</p>
+<p><strong>Entrega y explicación:</strong> código, datos y pruebas; describir el estado tras rollback y explicar por qué concatenar entrada en una consulta no sustituye parámetros.</p>
+<h3>F-I4. Algoritmo y experiencia comprobables</h3>
+<p><strong>Integra:</strong> F03–F04, F10–F11, F16–F17. Implementar una búsqueda u ordenación elegida, instrumentar su trabajo y presentar un resultado con entradas validadas.</p>
+<p><strong>Contrato:</strong> conservar datos cuando se solicite; documentar caso base/precondiciones; proporcionar mensajes textuales y controles que funcionen con teclado y ampliación. Las señales sonoras son complementarias.</p>
+<p><strong>Pruebas:</strong> vacío, un valor, repetidos, orden inverso y datos nuevos; registrar comparaciones o visitas en varios tamaños. Separar esas cuentas de las mediciones de tiempo repetidas.</p>
+<p><strong>Entrega y explicación:</strong> predicción, traza, código y comentario de resultados. Explicar qué enseña <code>dis</code> y qué no enseña sobre instrucciones de CPU; evaluar por separado una práctica de ensamblador nativo si la guía vigente la requiere.</p>
+<h2>Rúbrica común de transferencia</h2>
+<p>Aplicar a un problema nuevo, con datos cambiados respecto de los ejemplos y con acceso a documentación. La rúbrica orienta la revisión; no establece ponderaciones oficiales.</p>
+<table>
+<thead>
+<tr>
+<th>Dimensión</th>
+<th>Evidencia suficiente</th>
+<th>Evidencia parcial</th>
+<th>Pendiente</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Comprensión del contrato</td>
+<td>Declara entradas, salidas, restricciones e invariantes</td>
+<td>Reconoce el resultado pero omite condiciones</td>
+<td>Reproduce una salida sin explicar qué se pide</td>
+</tr>
+<tr>
+<td>Diseño</td>
+<td>Descompone y justifica estructuras y operaciones</td>
+<td>Solución coherente con decisiones poco justificadas</td>
+<td>Depende de copiar un caso sin adaptarlo</td>
+</tr>
+<tr>
+<td>Corrección</td>
+<td>Supera casos normales, fronteras y errores; conserva lo exigido</td>
+<td>Resuelve nominales y algunos límites</td>
+<td>Falla en casos esenciales o pierde datos</td>
+</tr>
+<tr>
+<td>Explicación</td>
+<td>Traza cambios y explica por qué funciona y termina</td>
+<td>Describe instrucciones sin conectar todo el razonamiento</td>
+<td>No puede anticipar un cambio pequeño</td>
+</tr>
+<tr>
+<td>Transferencia</td>
+<td>Adapta la solución a nuevos datos o requisito</td>
+<td>Adapta con ayuda concreta</td>
+<td>No puede modificarla manteniendo el contrato</td>
+</tr>
+<tr>
+<td>Comunicación y reproducibilidad</td>
+<td>Ejecución limpia, resultados legibles y límites explícitos</td>
+<td>Resultado utilizable con pasos no documentados</td>
+<td>No puede reproducirse o se presenta una conclusión injustificada</td>
+</tr>
+</tbody></table>
+<p>Solicitar una segunda variante tras un intervalo de estudio permite observar retención. Las ayudas consultadas no deben castigarse: conviene distinguir resolución acompañada de resolución transferida y usar la evidencia para decidir qué practicar después.</p>
+<h2>Prioridades para esta iteración</h2>
+<ol>
+<li>Hacer explícita la función opcional del emblema/cristal y separar sus recursos de la evidencia de aprendizaje.</li>
+<li>Incorporar las 45 guías y una revisión por unidad que pida explicación y transferencia.</li>
+<li>Corregir F16 y la señalización de ejercicios con código completo; no premiar su mera ejecución como implementación independiente.</li>
+<li>Incorporar los retos integradores como práctica final con rúbrica y revisión.</li>
+<li>En una iteración posterior, reforzar los validadores de implementación con entradas variables y pruebas que discriminen errores del objetivo, priorizando memoria, estructuras, gráficos y transformaciones de datos.</li>
+<li>Contrastar la guía oficial vigente cuando se disponga de ella y ajustar profundidad/calendario. No concluir “se aprende toda la asignatura” solo por cobertura de títulos o porcentaje de misiones.</li>
+</ol>
+<h2>Cambios aplicados en la edición 1.1</h2>
+<p>Las 34 coincidencias detectadas se han convertido en ejercicios de completar: el editor conserva datos y pruebas, pero requiere escribir el paso conceptual. Las soluciones siguen disponibles bajo petición. Las 45 unidades incorporan una idea central, pasos, error frecuente, variante de transferencia y preguntas de revisión. F16 distingue bytecode de ensamblador nativo.</p>
+<p>Estos cambios mejoran las oportunidades de práctica, no prueban por sí mismos el aprendizaje de cada estudiante. Los retos integradores y su rúbrica requieren revisión docente.</p>
+</article><p><a href="INFORME.html">Informe de pruebas</a> · <a href="DESPLIEGUE.html">Despliegue</a></p></main></body></html>

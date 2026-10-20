@@ -1,0 +1,19 @@
+{
+  "slug": "gremio-byte",
+  "passed": true,
+  "errors": [],
+  "violations": [],
+  "checks": [
+    "keyboard gather with explanation",
+    "sequential previous and next",
+    "back and browser forward",
+    "draft preservation",
+    "map history",
+    "learning guide",
+    "preferences persist",
+    "focus mode",
+    "200% large controls mobile",
+    "reduced motion",
+    "axe home/study/settings/contrast"
+  ]
+}

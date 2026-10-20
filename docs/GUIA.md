@@ -32,3 +32,14 @@ Abre el botón con tu alias para cambiar colores, tamaño del texto hasta 200 %,
 GCC 14.2 ejecuta C99 dentro de una máquina virtual local. La primera ejecución carga aproximadamente 55 MB y puede tardar. Detener termina el motor; la siguiente ejecución lo vuelve a iniciar.
 
 Los tiempos medidos dependen del navegador y el equipo; no son benchmarks de rendimiento nativo.
+
+
+## Edición 1.1 · Orientación y aprendizaje
+
+El emblema da una moneda por pulsación; es opcional y no completa ejercicios. Las monedas compran mejoras y reliquias. Las misiones aportan más monedas y abren mejoras; todo el temario está disponible sin pulsar el emblema.
+
+Anterior y Siguiente recorren el catálogo en orden. Volver regresa a la misión visitada antes; el historial del navegador también conserva esos destinos y los borradores.
+
+Lectura, imagen y sonido permite texto hasta 200 %, espaciado amplio, controles grandes, contraste, paletas descriptivas, volumen, fondo animado y mesa de estudio. Todos los sonidos tienen información escrita. La lectura en voz alta usa las voces disponibles en el navegador y puede detenerse.
+
+Los cuadernos siguen Entiende → Predice → Programa → Comprueba. Cada bloque termina con transferencia a un problema nuevo. Consulta la [matriz de cobertura y los ocho retos integradores](APRENDIZAJE.md), incluida la rúbrica para revisar explicaciones y decisiones.
