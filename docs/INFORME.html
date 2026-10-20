@@ -1,0 +1,18 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>INFORME</title><link rel="stylesheet" href="../style.css"><style>main{max-width:900px;padding:2rem;margin:auto;background:var(--panel)}table{max-width:100%}h1{font:2rem/1.1 Georgia,serif}</style><body><main><a href="../">← Volver al juego</a><article class="prose"><h1>Informe de verificación</h1>
+<p>Pascal &amp; Sara · 20 de octubre de 2026 · Beta 1.0</p>
+<h2>Resultado</h2>
+<p>Se ejecutaron las soluciones de las <strong>176 misiones</strong> en Microsoft Edge/Chromium, con <strong>176 aprobadas y 0 fallos</strong>, sobre trabajadores ofuscados y GCC 14.2 / Linux x86 en v86. Cada misión utiliza todos sus casos de prueba declarados; el número de misiones no equivale al número de casos ni al de ejercicios independientes de escritura.</p>
+<p>Se realizaron dos pasadas completas del banco durante la reconstrucción. La segunda incorpora los cambios del catálogo y del empaquetado del motor. La evidencia final está en <code>evidence/catalog-browser-v1.json</code>.</p>
+<h2>Interacción</h2>
+<p>Pruebas automatizadas de clic, pistas, propuestas explicadas, ejecución real, recompensa única, representación del resultado, inventario, exportación, importación, preferencias, búsqueda de misiones, detención y persistencia de borradores.</p>
+<p>El alias con sintaxis HTML se presenta como texto. La importación rechaza esquemas ajenos, límites incorrectos y claves peligrosas. El código de práctica se ejecuta en trabajadores que se pueden terminar.</p>
+<p>Escritorio: 1440 px. Móvil: 390 px. Sin desbordamiento horizontal detectado, también con el texto al 200 %. La revisión con axe-core de las pantallas iniciales no detectó infracciones de las reglas WCAG A/AA seleccionadas. Esto no sustituye una auditoría manual con lectores de pantalla ni pruebas en todos los navegadores.</p>
+<p>Se inspeccionaron capturas reales de escritorio y móvil. El informe automatizado de uso está en <code>evidence/ui-browser-v1.json</code>.</p>
+<h2>Material docente</h2>
+<p>46 cuadernos por bloque, en versiones de práctica y propuestas explicadas, acompañan este juego. En la entrega conjunta se validaron la estructura JSON de 90 cuadernos y la sintaxis de 446 celdas Python de soluciones. Las celdas C y SQL se apoyan en las soluciones comprobadas en los motores; no se afirma una ejecución completa de los cuadernos dentro de Colab.</p>
+<p>Los originales se conservaron. Las diapositivas y PDF originales no se han remaquetado en esta reconstrucción.</p>
+<h2>Límites</h2>
+<p>Es una beta comprobada, no una garantía de ausencia absoluta de errores. Muchas actividades del banco son lecturas con datos fijos. Las pruebas finitas no demuestran generalización a toda entrada, ni impiden respuestas artificiosas.</p>
+<p>El motor C usa punteros de 32 bits; los tiempos corresponden a la emulación. El contexto del navegador y los dispositivos pueden cambiar el rendimiento. No se verificó Safari ni Firefox.</p>
+<p>La equivalencia exacta con la guía y los criterios UAX 2026/27 queda pendiente de esa documentación vigente. E/R, interpretación de gráficos y justificaciones requieren valoración docente.</p>
+</article><p><a href="INFORME.html">Informe de pruebas</a> · <a href="DESPLIEGUE.html">Despliegue</a></p></main></body></html>

@@ -1,0 +1,20 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DESPLIEGUE</title><link rel="stylesheet" href="../style.css"><style>main{max-width:900px;padding:2rem;margin:auto;background:var(--panel)}table{max-width:100%}h1{font:2rem/1.1 Georgia,serif}</style><body><main><a href="../">← Volver al juego</a><article class="prose"><h1>Despliegue y mantenimiento</h1>
+<p>Pascal &amp; Sara · Gremio Byte</p>
+<h2>Distribución pública</h2>
+<p>El repositorio <code>Blai3ePascal/gremio-byte</code> contiene la distribución de publicación. GitHub Pages sirve archivos estáticos por HTTPS. El JavaScript propio, el catálogo integrado y el adaptador del motor se publican ofuscados; las bibliotecas de terceros conservan sus licencias. Los ejercicios descargables permanecen legibles.</p>
+<h2>Edición privada</h2>
+<p>La entrega <code>CODIGO-EDITABLE</code> contiene <code>src/</code>, <code>content/</code>, <code>public/</code>, <code>public-assets/</code>, <code>scripts/</code>, <code>package.json</code> y <code>package-lock.json</code>. Conserva esta copia para mantenimiento. No edites manualmente <code>app.js</code>.</p>
+<p>Con Node.js 22:</p>
+<pre><code class="language-text">npm ci --ignore-scripts
+npm run build
+npm run check
+npm test
+</code></pre>
+<p>La salida está en <code>dist/</code>. Sirve esa carpeta por HTTP para probarla; abrir index.html con file:// no permite cargar correctamente los motores. <code>python -m http.server 8000 --directory dist</code> sirve una vista local.</p>
+<p>Los archivos del motor son entradas versionadas, no se descargan de CDN durante el juego. Las rutas relativas permiten publicar bajo <code>/gremio-byte/</code>.</p>
+<h2>Publicar una actualización</h2>
+<p>Construye y verifica localmente. Copia el contenido de <code>dist/</code> al repositorio de distribución, conserva <code>.github/workflows/pages.yml</code>, revisa los cambios y publícalos en <code>main</code>. El flujo de Pages publica el contenido del repositorio.</p>
+<p>El código editable no se incorpora al repositorio público. No publiques node_modules, mapas de fuentes, partidas personales ni materiales privados del campus.</p>
+<h2>Recuperar una versión</h2>
+<p>Conserva el ZIP de distribución y su SHA-256. Para revertir, restaura la versión anterior en un commit nuevo y deja que Pages la publique. Las partidas usan un esquema versionado; una migración futura debe validarlas antes de cambiarlo.</p>
+</article><p><a href="INFORME.html">Informe de pruebas</a> · <a href="DESPLIEGUE.html">Despliegue</a></p></main></body></html>
