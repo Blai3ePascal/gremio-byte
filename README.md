@@ -1,23 +1,21 @@
 # Gremio Byte
 
-Creado por **Pascal & Sara** · Beta 1.0
+Creado por **Pascal & Sara** · Beta 1.2.0
 
-Aventura de programación en C con GCC real dentro del navegador.
+136 actividades de C, agrupadas en 13 niveles temáticos. Ejecución real en el navegador, ejemplos legibles, práctica progresivamente autónoma y cuadernos de trabajo.
 
-176 misiones, 23 bloques, pistas, soluciones explicadas, laboratorio libre, guardado local y partidas JSON. Ajustes de contraste, texto, color, movimiento y sonido.
+- [Jugar](https://blai3epascal.github.io/gremio-byte/)
+- [Guía](docs/GUIA.md)
+- [Contenidos y alcance](docs/COBERTURA.md)
+- [Aprendizaje](docs/APRENDIZAJE.md)
+- [Pruebas y límites](docs/INFORME.md)
+- [Despliegue](docs/DESPLIEGUE.md)
+- [Licencias](docs/FUENTES.md)
 
-- Web: https://Blai3ePascal.github.io/gremio-byte/
-- Uso: [Guía](docs/GUIA.md)
-- Mantenimiento: [Despliegue](docs/DESPLIEGUE.md)
-- Temario: [Cobertura](docs/COBERTURA.md)
-- Comprobaciones y límites: [Informe](docs/INFORME.md)
-- Recursos de stock y dependencias: [Fuentes](docs/FUENTES.md)
+## Edición 1.2
 
-El proyecto de C comenzó en febrero de 2026 y el de Python/SQL en junio de 2026. Esta reconstrucción se publicó en octubre de 2026.
+Pulsaciones con monedas, tres hechizos de producción automática, precios progresivos y mejoras de pulso. Números discretos sobre el emblema, desactivables en Opciones. Tutorial ilustrado de tres pasos, ayudas en ventanas, niveles numerados con navegación en ambos sentidos y ambientes animados distintos.
 
-El progreso es formativo y local. La ofuscación no constituye una barrera de seguridad. Las licencias de terceros se conservan; la autoría del proyecto corresponde a Pascal & Sara.
+La ruta utiliza nuestros materiales y agrupa el repaso dentro de los mismos temas. Las ampliaciones de alcance no confirmado quedan en la reserva local del profesorado; no cuentan para completar el juego. Los guardados anteriores conservan monedas, borradores y progreso.
 
-
-## Edición 1.1
-
-Navegación Anterior/Volver, función del emblema explicada, opciones de lectura, imagen y sonido, dos ambientes diferenciados y cuadernos guiados. [Cobertura y revisión del aprendizaje](docs/APRENDIZAJE.md).
+El progreso se guarda en este navegador; se puede exportar e importar como JSON. Las monedas no califican el aprendizaje ni bloquean contenidos. El código propio de publicación está ofuscado; las licencias de terceros se conservan. La copia de mantenimiento es legible y se entrega separadamente.

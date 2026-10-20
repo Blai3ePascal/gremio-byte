@@ -1,50 +1,36 @@
-# Cobertura docente
+# Contenidos y alcance
 
-Pascal & Sara · 20 de octubre de 2026
+Pascal & Sara · Edición 1.2
 
-176 misiones en 23 bloques. La cifra incluye ejemplos de lectura, predicciones, ejercicios de completar y retos de escritura.
+136 actividades, 13 niveles de juego. Los niveles agrupan temas de nuestros materiales; no son capítulos oficiales ni una ampliación del programa.
 
-| Bloque | Contenido | Misiones |
-|---|---|---:|
-| INICIO | El despertar | 4 |
-| C01 | Edición, compilación y primer programa | 10 |
-| C02 | Bits, lógica y representación | 10 |
-| C03 | Variables, tipos y entrada/salida | 10 |
-| C04 | Condicionales y menús | 10 |
-| C05 | Bucles, contadores y trazas | 11 |
-| C06 | Funciones y organización del programa | 12 |
-| C07 | Vectores, matrices e índices | 11 |
-| C08 | Cadenas, capacidad y comparación | 10 |
-| C09 | Punteros, direcciones y memoria | 11 |
-| C10 | Punteros y parámetros de funciones | 11 |
-| C11 | Registros con struct | 10 |
-| C12 | Ficheros de texto y comprobación de errores | 10 |
-| C13 | Persistencia binaria e integración | 10 |
-| C14 | Vectores: longitud, capacidad y memoria propia | 5 |
-| C15 | Búsqueda, ordenación y coste del trabajo | 5 |
-| C16 | TAD: pilas y colas con contratos | 5 |
-| C17 | Lista enlazada: enlaces y propiedad | 4 |
-| C18 | Árbol binario de búsqueda e inorden | 3 |
-| C19 | Hash: colisiones, rechazo y crecimiento | 3 |
-| C20 | Proyecto: registros, consulta y fichero de texto | 3 |
-| P01 | Estado, alias y control de errores en C | 5 |
-| C-TALLER | Taller de construcción y herramientas | 3 |
-
-El mapa conserva el banco de los paquetes aportados y añade cuatro misiones de introducción vinculadas a la escena. Las soluciones no aparecen en el enunciado visible. Los cambios libres de los ejemplos se distinguen de las pruebas de la misión.
-
-La revisión contrasta el material aportado y la [guía pública FPI 2025](https://www.uax.com/download/64662/file/AGCI_GD_FundamentosDeLaProgramaci%C3%B3n_2025.pdf). Esta guía corresponde a otro curso y contiene discordancias de plantilla: no acredita la programación ni los criterios de evaluación de 2026/27. Se conserva C para una asignatura y Python/SQL para la otra conforme al encargo.
-
-El bytecode de Python no sustituye ensamblador nativo. Los diagramas E/R, la elección de gráficos y las explicaciones de algoritmos requieren revisión docente. Las pruebas finitas y el análisis del código son formativos; no equivalen a verificar todas las soluciones posibles.
-
-La auditoría de los originales y las correcciones realizadas se entregan con el código editable.
+| Nivel de juego | Tema | Actividades |
+|---|---|---|
+| 1 | Edición, compilación y primer programa | 10 |
+| 2 | Bits, lógica y representación | 10 |
+| 3 | Variables, tipos y entrada/salida | 10 |
+| 4 | Condicionales y menús | 10 |
+| 5 | Bucles, contadores y trazas | 11 |
+| 6 | Funciones y organización del programa | 12 |
+| 7 | Vectores, matrices e índices | 11 |
+| 8 | Cadenas, capacidad y comparación | 10 |
+| 9 | Punteros, direcciones y memoria | 11 |
+| 10 | Punteros y parámetros de funciones | 11 |
+| 11 | Registros con struct | 10 |
+| 12 | Ficheros de texto y comprobación de errores | 10 |
+| 13 | Persistencia binaria e integración | 10 |
 
 
-## Edición 1.1 · Orientación y aprendizaje
+## Criterio de selección
 
-El emblema da una moneda por pulsación; es opcional y no completa ejercicios. Las monedas compran mejoras y reliquias. Las misiones aportan más monedas y abren mejoras; todo el temario está disponible sin pulsar el emblema.
+Se conserva la ruta base de nuestros materiales y se profundiza con ejercicios ya existentes del mismo tema. C01–C13 forman la ruta. C14–C20, P01 y el taller multifichero quedan en reserva docente hasta confirmar el alcance.
 
-Anterior y Siguiente recorren el catálogo en orden. Volver regresa a la misión visitada antes; el historial del navegador también conserva esos destinos y los borradores.
+Las fuentes originales y los complementos se conservan localmente. Sus identificadores siguen siendo válidos al importar partidas antiguas, pero no suman al porcentaje del recorrido actual.
 
-Lectura, imagen y sonido permite texto hasta 200 %, espaciado amplio, controles grandes, contraste, paletas descriptivas, volumen, fondo animado y mesa de estudio. Todos los sonidos tienen información escrita. La lectura en voz alta usa las voces disponibles en el navegador y puede detenerse.
+## Alcance de la revisión documental
 
-Los cuadernos siguen Entiende → Predice → Programa → Comprueba. Cada bloque termina con transferencia a un problema nuevo. Consulta la [matriz de cobertura y los ocho retos integradores](APRENDIZAJE.md), incluida la rúbrica para revisar explicaciones y decisiones.
+La correspondencia se apoya en la matriz de cobertura y el informe de nuestros paquetes revisados. No están disponibles los PDF primarios del campus citados en esa matriz. Esta revisión no certifica equivalencia exacta con una guía oficial vigente. La selección evita convertir ampliaciones de profundidad no confirmada en requisitos.
+
+## Lo que acreditan los ejercicios
+
+Se comprueba la ejecución de los casos de referencia, las reglas indicadas y los resultados. Los contenidos de diseño, interpretación y explicación necesitan revisión con el profesorado. Completar todos los casos no garantiza por sí solo dominio de toda la asignatura.

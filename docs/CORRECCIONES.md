@@ -1,25 +1,13 @@
-# Correcciones de esta edición
+# Cambios de la edición 1.2
 
-Pascal & Sara · Beta 1.0
+Pascal & Sara
 
-- Enunciados visibles breves, instrucciones completas desplegables y soluciones separadas.
-- Cuaderno y mapa en diálogos accesibles; la escena y el editor ocupan el espacio principal.
-- Los ejemplos aclaran que los cambios libres se realizan en el laboratorio.
-- Cuatro misiones de inicio por juego conectan las instrucciones con cantidades visibles.
-- Economía local, producción, mejoras vinculadas a misiones e inventario determinista.
-- Las respuestas numéricas se muestran con su valor real; no se transforman mediante módulo ni se presentan como memoria inspeccionada.
-- SQL verifica todas las columnas y tablas relacionadas en los retos de modificación auditados.
-- Nuevos datasets de costes, tipos, medias y empates.
-- Python comprueba conservación de argumentos, captura de ValueError y ejecución de cuerpos de bucle cuando el caso lo requiere.
-- Los ejercicios que guardan PNG comprueban la existencia y propiedades del artefacto.
-- El reto C de punteros incluye una llamada con NULL.
-- Marcadores TODO coherentes en los dos ejercicios hash señalados.
-- Guardado JSON validado, alias tratado como texto, límites de ejecución y salida, y descarga solicitada mediante botón.
-- Código propio y catálogo integrados en el paquete ofuscado; copia editable separada.
-
-Las comprobaciones estructurales son ayudas formativas. No se presenta el progreso como una nota oficial ni como demostración formal de corrección.
-
-
-## Edición 1.1
-
-Consulta el [informe de verificación](INFORME.md) y la [matriz de aprendizaje](APRENDIZAJE.md). Se corrigieron los 34 códigos iniciales completos, las afirmaciones sobre ensamblador de F16 y la interferencia del trazador con comprensiones de Python. Se añadió navegación con historial y guías por unidad.
+- Producción automática fraccionaria, precios progresivos y guardados antiguos compatibles.
+- Números sobre el emblema, con límite de elementos y opción para ocultarlos.
+- Tutorial inicial de tres pasos y documentos de ayuda en ventanas.
+- Mapa numerado, desplazamiento en ambos sentidos y color por tramo.
+- Probar cambios conserva y recupera el borrador del ejercicio.
+- Código C, Python y SQL formateado; las plantillas incompletas deliberadas se conservan.
+- Guías plegadas en retos y repasos; tareas de repaso dentro de los mismos temas.
+- Ruta concentrada en los materiales de la asignatura; complementos conservados para profesorado.
+- Cuadernos regenerados a partir del catálogo actual.

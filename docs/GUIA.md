@@ -1,45 +1,31 @@
-# Gremio Byte
+# Cómo jugar a Gremio Byte
 
-Creado por Pascal & Sara · Beta 1.0 · 20 de octubre de 2026
+Pascal & Sara · Edición 1.2
 
-Resuelve una misión para activar tu mundo. Escribe en el editor y pulsa **Compilar hechizo**. La salida real aparece debajo; sus valores se representan en la escena.
+## Tu objetivo
 
-## Jugar
+Recupera las instrucciones perdidas del gremio con tus programas en C.
 
-1. Completa la primera instrucción. Usa **Una pista** cuando lo necesites.
-2. Cada misión nueva concede monedas una sola vez. Los ejemplos de lectura conceden menos que los retos.
-3. Pulsa el personaje o el cristal para ganar una moneda. Las mejoras requieren tanto monedas como misiones completadas.
-4. Completar misiones activa producción local, con un máximo de ocho horas entre visitas. No hay penalización por ausentarte.
-5. Fabrica reliquias cosméticas en un orden fijo y consulta el inventario. No hay compras ni sorteos de pago.
-6. El mapa reúne todos los bloques. Puedes practicar cualquier tema; no hay que esperar para acceder al contenido.
+Pulsa el emblema para reunir monedas. La Chispa paciente cuesta inicialmente 15 y produce 0,2 monedas por segundo; Manos encantadas cuesta 75 y produce 1; Fuente de estrellas cuesta 350 y produce 5. Cada compra de un mismo hechizo multiplica su siguiente precio por 1,18, redondeando hacia arriba. Cada unidad conserva su producción.
 
-**Cuaderno** contiene ideas, vocabulario, pistas y propuestas explicadas. Consultar una solución queda registrado como apoyo; no resta monedas.
+Pulso añade una moneda por pulsación: empieza en 25 monedas y su precio crece por 1,45. Las reliquias cuestan 30, son cosméticas y siguen un orden fijo. No hay pagos ni rachas obligatorias.
 
-**Laboratorio libre** ejecuta tus cambios sin compararlos con una solución fija. Las funciones aisladas requieren que añadas una llamada si quieres ver su resultado en este modo.
+Los hechizos acumulan un máximo de ocho horas cuando vuelves. El contador de monedas reunidas no baja al comprar; el monedero sí. Los ejercicios dan una recompensa una sola vez. Todos los contenidos están abiertos desde el principio.
 
-## Guardar
+## Tu ejercicio
 
-El progreso y los borradores se guardan en este navegador. **Guardar partida** descarga un JSON; comprueba que la descarga se haya completado. **Importar partida** lo restaura en otro equipo.
+Lee el objetivo y el enunciado; observa o escribe el código. Ejecuta, compara los casos y corrige. Los primeros ejemplos tienen orientación; en los retos y repasos la ayuda queda plegada para que lo intentes por tu cuenta.
 
-El navegador no garantiza una descarga al cerrar la pestaña. Usa el botón antes de salir. Borrar los datos del sitio puede eliminar la copia local.
+**Probar cambios** ejecuta experimentos sin recompensas ni comprobaciones del objetivo. Al entrar se guarda tu borrador; al volver se recupera. Las pruebas libres no se guardan. En una función debes añadir tu propia llamada si quieres ver un resultado.
 
-## Accesibilidad
+## Navega
 
-Abre el botón con tu alias para cambiar colores, tamaño del texto hasta 200 %, contraste, paleta de los elementos, emblema, sonido y movimiento. Los controles se usan con teclado. Mayús + Tab sale del editor; Ctrl/⌘ + Intro ejecuta. Los números, etiquetas y formas acompañan al color.
+Los números sobre los edificios indican el nivel del mapa, no un capítulo oficial. Las flechas del mapa recorren grupos de niveles en ambos sentidos. Anterior y Siguiente recorren ejercicios; Volver recupera tu navegación previa. Puedes repetir cualquier ejercicio.
 
-## Ejecución
+## Guarda y adapta
 
-GCC 14.2 ejecuta C99 dentro de una máquina virtual local. La primera ejecución carga aproximadamente 55 MB y puede tardar. Detener termina el motor; la siguiente ejecución lo vuelve a iniciar.
+El tutorial aparece la primera vez; puedes reabrirlo en Opciones. El guardado local pertenece a este navegador. Descarga tu JSON con Guardar partida y usa Importar partida para llevarlo a otro equipo.
 
-Los tiempos medidos dependen del navegador y el equipo; no son benchmarks de rendimiento nativo.
+En Opciones ajusta tamaño, contraste, colores, controles, sonido, movimiento, fondo y números flotantes. Todos los avisos importantes están escritos. La mesa de estudio oculta la tienda y la decoración.
 
-
-## Edición 1.1 · Orientación y aprendizaje
-
-El emblema da una moneda por pulsación; es opcional y no completa ejercicios. Las monedas compran mejoras y reliquias. Las misiones aportan más monedas y abren mejoras; todo el temario está disponible sin pulsar el emblema.
-
-Anterior y Siguiente recorren el catálogo en orden. Volver regresa a la misión visitada antes; el historial del navegador también conserva esos destinos y los borradores.
-
-Lectura, imagen y sonido permite texto hasta 200 %, espaciado amplio, controles grandes, contraste, paletas descriptivas, volumen, fondo animado y mesa de estudio. Todos los sonidos tienen información escrita. La lectura en voz alta usa las voces disponibles en el navegador y puede detenerse.
-
-Los cuadernos siguen Entiende → Predice → Programa → Comprueba. Cada bloque termina con transferencia a un problema nuevo. Consulta la [matriz de cobertura y los ocho retos integradores](APRENDIZAJE.md), incluida la rúbrica para revisar explicaciones y decisiones.
+Cómo jugar, Contenidos y Ruta de aprendizaje se abren dentro del juego. Las atribuciones y condiciones de guardado están en Opciones.
